@@ -12,12 +12,6 @@ import hypercorn
 
 app = FastAPI()
 
-json_file_path = 'xaveirs.json'
-
-# with open(json_file_path, 'r') as j:
-#     contents = json.loads(j.read())
-    # print(contents)
-
 cred_dict = {
   "type": "service_account",
   "project_id": "qr-system-392315",
@@ -37,7 +31,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_dict(cred_dict, scopes
 drive_service = build('drive', 'v3', credentials=credentials)
 sheets_service = build('sheets', 'v4', credentials=credentials)
 
-spreadsheet_id = '1A-HPU-VjE0fTXPZqw2n1BbVp1vumFyX8TG1mREZCsKw'
+spreadsheet_id = '1FMB0667Porc-wIRkur_5eA2Ac9kCMaJuahqEGCFgqGM'
 
 @app.get("/")
 def hello():
