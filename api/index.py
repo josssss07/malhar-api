@@ -20,15 +20,15 @@ json_file_path = 'xaveirs.json'
 
 cred_dict = {
   "type": "service_account",
-  "project_id": "ecc-app-388505",
-  "private_key_id": "6e31801f545801c79d8ae2bff5dc7ca75f3f060b",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCuANlLQdrAIMb7\noCtHIKeYRgoxPP+xjkW5IRO3YQekCEf6qzLZ7CsDKxofXlrGmJLdh7q/jRIZRuVn\nKcXv+RGhLgIk2VFZKy6mnSRDjUdeHLi5a9qG1YpOWsRyHL1RARELtZB/xh3A5nHg\nqeX2DcjmjkDq24qscwFh04fni60nIDD5gtIS8/xD5+CQMOZrF8hofkCTlW3eGWCU\nbJXG9nNfnQQNzRfcZQ7W7cJ/v1ijWUoFB1t6kKRo58EXMZmWEpwXEsaofr4TkiIw\nZoaM1QkbX65CutzFNifdiWumE3q8uOVSQv5hOxrwFc51SL/RgosvyZU+i2xx8rNR\nUyGadc7zAgMBAAECggEAFL5rKUqnjoIZ1sOohSlCcaff7TDNdth0PXbRB+qcY5TN\nJ/gi7tH16sHHsneoMMbds2VMASwLPVIzZRIY09wImwOGI+h4hz3bqOdQ/HCqUnDw\nIMLX4X0xqNevVb9RXofXBWNW37S5tVaDuvnmPWg1TC8nVBhqNtbbElOKfzMqqGA+\nPM66CYoDepVNMc033Nd8qy38sgFNue6nGYIvk/7HvsIOPtujFRY87Pg7iUV+5eXu\nMRSCE4c/OI0b2BNE+aERw4YJBU6FYtH0Bbku0SY+BgmXF1IKKtOi6/m986uOKwFx\ntq8N1DHiRIwxFQ1yXy0tq+j9HUqjwxXKCsmeRwh+KQKBgQDz5SnTTz+9CJ7mg/NA\nlq731unKpo0a3rc+rFtCMqosDE2AAFYe3uIxB7DfnzCZpwsKz1Rf4/LWRNIB2Smm\nHLeLm4dsPOV2Lnl7aKJi1P09eC+wJPM1iy5L2wJ2DlUhpyg2S5pinbk6u949RwZG\nLqluNtag4g77QSK7jlFYmiNBDwKBgQC2o6q36nbonJtj6Tu5v9qPq5t6BZti6gHu\nQx1hqaZLiNtLiMRE82BD5rnOWWWvT4D/k/n7OgrK+CKUDQJx2v8kpZ9Sk/s6ary/\nj9xeW7QKzQrMk8QADzZMBDWSO6edHuImIDlAzCJZGJSRoaTTEQ34NMpsHIj9X0oE\nQml0UBUL3QKBgB+h9U7G1Il7+MAFFSOnZ4IVibUS7PIzOKkUSbHISHH2FocnhAP0\n/HlHehVG3FLRa4k3YsYdFn3b5zD+LXyx9MxSm7naHBi75l2vMICJB19VmznJURH8\nv0BvY15UdY4r0/dWzutDcabAfw6Li7DGlIsK6cNsDm1gAVU6HCrVswTZAoGAC8s1\n0vqJAyxZvHHrMWt6KZzjRVXnWtPRnBkpZI0X9/i2cII8alds9/WGOhT7w/5WTiq4\nEckFuWWclgLhDYkewLcROrvjlTofRh98E3vIfIoREHTaS0awMuhyrSa9BCBiaiPa\njpyf+zDjJyRRCHApfsWp7KFLF1F37h57wM8LDOECgYEAlHTO12K31WusrooOoPBe\n4owI3720EEo330ytNYp1L20rlUH4D1wI/UG+qcZVXg9ehu/OjXkCBQHcpGAuKzHx\nWIzvG7Y8nvK3Sv5IHXDjjY9B3BMOjTYxG1LdskdW56mdiyICUoitsDqNKnvmMBvX\nQsWDtvRNaeDVgeRI5XfvLrs=\n-----END PRIVATE KEY-----\n",
-  "client_email": "app-helper@ecc-app-388505.iam.gserviceaccount.com",
-  "client_id": "109978774170613118113",
+  "project_id": "qr-system-392315",
+  "private_key_id": "5bb704e5446d7c8a781f1b49c99835d473f3857c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDG93Vb7NqOGm9y\nRiB+v9mBMGMvT9azjiXo5qBSeOMyCNzukIWOJ3sqdh/MEjYKQVPLZApmWZ71t7Kv\nt86R9tmJWQmjPM/rn/RR6WA1XqpNszTzoldEfuJA8iYPZCKHY3n9DEz9WsMvqptL\n3Y9Gcq1E4hURTTVA3a7iXm3D+Bs8tQ5P49NOb8FEdqLBmxGWjlXB1Wm3rgBP68e0\neb/KAMASsNwuZTKgAWkcc5zUKrpszRwJ88D9nThT3yyrzYjqqdWpQ5B7I8Ihp3v7\nQW4aCNu14JOZm9nTSc7D9oTToVCB7Z+u1+hhqyqfIWTH2PGhOmKXs7wvGkPYAcrO\n2dZNpfdxAgMBAAECggEAHJrLBpJAwZlPWHB4j4BpdsdMGysxRNM05Az0E6dJkpHv\noWSprsxCStJ8s8wSdNr7fww86oYL8muchuK4EggZMkPYvN0rT0bJy1Tv/fxEI7OV\n80jtnu1W/dtSWXgd9rT4fsbb8rivwxSWCwwpYwltm6+dM8WT2GWGlQjaYwgyckGc\nimIDwqvn5cL/CKPSUXw9xNJo83b8u7HaDQTpsLuwihce+muI+Nec8ru06Oiy5nRk\ne0aebUOFp3eq020lmRk3WFB9/bEuIVTqY3CLYEFF+DPfocWBPYJiXIxrTYqq6BIk\n+ucMU//zbbTSBNnLEpMcjYo4Rt8AynnHFEhcpMsGWQKBgQDmqK/+e8PV14W77kEb\nUp/3l3xfiO0I1v/ZHWczs2+WEjFl0IHs0srrzT3DN7nsdwI+WmnoriNEguyQ9D6C\nV7pWtyl0ZizdcCuCwSdo4AVXAp85z+TmEvQ3JTHzbtQrXIDEwN4woq1db4qBlcji\nwWR7ZpdAcpjc3JRpk30Eh5OIGwKBgQDc02u+hkb+PI2nT5sXNvuXys/H49+p9rR0\n85a9RrrdAcHImNVup91gSC69t60S4yw4LBy8i6IV3G6bMsARU6kcw7MERou85t96\ntjDgMuCgGi5j564RLTB7HsYX8WHPRHrK0PTm/oIjG7Ghc7YuKis99OFrdXJ3u7lq\nMk2GQ0hPYwKBgA2dDyYZ7+kDG2WIHleafM6EJlcNIdBPwDH0Rk8K3B8jW78Cm2h6\n2HcqWebXtyV5sKw1ceLFxFca0xOLFtVikCDmFpBEJ4m6QRcqh0TtU+NayEMFPiFG\nJRvMGjKf6+3TO9Zg+7wrHchR+P7E9GJNv7x4xZyMJvGCI1BH4C0QQ2jZAoGAQho/\nrH7BjaVOugDIakCZO60IWcvKzjP9fOzV+L7NfQ7jlUq6yS8Sw5mX9E6hToAWYpJB\n3+bklCqyKV8dw5IJk4S5d9QuTFPIHhGfu90/BG4R6PIXVyjx1Ek3/z7QipzzLPcz\n+FnDVwMZPz1GEbepzhgZynMT2uek7zczobdOVAUCgYAVWzWG/62Dq6Na0OW4F9q+\n3GrL2lt8rlkhHzK0PhKqoDXw/sa/L31Qz/5EUkNrFPbdtZdqUld2Ka7kbkUFz0FQ\nepaBeRpLPwt/exmMKB1YLXutEr6KE5CkTR0qfrXPnIyQNVLiUNYfBT/Yjwk/mXlV\nK7ZDLZoEM9sCSu4j2/jCXQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "api-handler@qr-system-392315.iam.gserviceaccount.com",
+  "client_id": "117656494409799298413",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/app-helper%40ecc-app-388505.iam.gserviceaccount.com",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/api-handler%40qr-system-392315.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
 }
 
@@ -57,7 +57,7 @@ def new_qr(response_id: str):
         stream = BytesIO()
         img.save(stream)
 #         16Gjz0uD3LhVcv5gW_0NeGhjf30ZWFJnn
-        file_metadata = {'name': f"{response_id}.png", 'parents': ['14wI-x6x146_WZjUrmLu15mFVTgX9g_aN']}
+        file_metadata = {'name': f"{response_id}.png", 'parents': ['1E-MPKuk-RNKYiBRuUQAOt5vXtRLFT4Si']}
         media = MediaIoBaseUpload(stream, mimetype='image/png', )
         file = drive_service.files().create(body=file_metadata, media_body=media,
                                             fields='id').execute()
