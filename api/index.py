@@ -15,7 +15,7 @@ import hypercorn
 
 app = FastAPI()
 
-app.mount("/", StaticFiles(directory="static"), name="static")
+# app.mount("/", StaticFiles(directory="static"), name="static")
 
 cred_dict = {
   "type": "service_account",
