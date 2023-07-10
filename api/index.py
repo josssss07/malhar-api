@@ -9,6 +9,7 @@ from googleapiclient.http import MediaIoBaseUpload
 from pydantic import BaseModel
 import qrcode
 import uvicorn
+import os
 import hypercorn
 
 app = FastAPI()
@@ -68,7 +69,7 @@ def new_qr(response_id: str, ticket_type:str):
         # print(F'File ID: {file.get("id")}')
         return {"message": "QR Generated successfully! ", "status": 200}
     except Exception as e:
-        print(e)
+        print(e.with_traceback())
         return {"message": "Unexpected error occurred", "status": 503}
 
 
@@ -77,11 +78,11 @@ def new_qr(response_id: str, ticket_type:str):
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
-        img = Image.open('early-stag.jpg')
+        img = Image.open(f'{os.getcwd()}/early-stag.jpg')
         if ticket_type == "Stag":
             print("Stag")
         elif ticket_type == "Couple":
-            img = Image.open('early-couple.jpg')
+            img = Image.open(f'early-couple.jpg')
         qr.add_data(qr_string)
         qr.make()
         img_qr = qr.make_image(fill_color="black", back_color="#E6E6FA")
