@@ -47,6 +47,7 @@ def hello():
 @app.get("/generate-qr/normal")
 def new_qr(response_id: str, ticket_type:str):
     try:
+        qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
         img = Image.open('late-stag.jpg')
         if ticket_type == "Stag":
@@ -72,6 +73,7 @@ def new_qr(response_id: str, ticket_type:str):
 @app.get("/generate-qr/early")
 def new_qr(response_id: str, ticket_type:str):
     try:
+        qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
         img = Image.open('early-stag.jpg')
         if ticket_type == "Stag":
