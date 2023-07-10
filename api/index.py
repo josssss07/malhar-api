@@ -1,6 +1,7 @@
 from io import BytesIO
 from fastapi import FastAPI
 import json
+from PIL import Image
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -44,13 +45,21 @@ def hello():
 
 
 @app.get("/generate-qr/normal")
-def new_qr(response_id: str):
+def new_qr(response_id: str, ticket_type:str):
     try:
         qr_string = response_id
-        img = qrcode.make(qr_string)
+        img = Image.open('late-stag.jpg')
+        if ticket_type == "Stag":
+            pass
+        elif ticket_type == "Couple":
+            img = Image.open('late-couple.jpg')
+        qr.add_data(qr_string)
+        qr.make()
+        img_qr = qr.make_image(fill_color="black", back_color="#E6E6FA")
+        pos = (1440,90)
+        img.paste(img_qr, pos)
         stream = BytesIO()
         img.save(stream)
-#         16Gjz0uD3LhVcv5gW_0NeGhjf30ZWFJnn
         file_metadata = {'name': f"{response_id}.png", 'parents': ['1E-MPKuk-RNKYiBRuUQAOt5vXtRLFT4Si']}
         media = MediaIoBaseUpload(stream, mimetype='image/png', )
         file = drive_service.files().create(body=file_metadata, media_body=media,
@@ -61,10 +70,19 @@ def new_qr(response_id: str):
         return {"message": "Unexpected error occurred", "status": 503}
 
 @app.get("/generate-qr/early")
-def new_qr(response_id: str):
+def new_qr(response_id: str, ticket_type:str):
     try:
         qr_string = response_id
-        img = qrcode.make(qr_string + "Early Bird")
+        img = Image.open('early-stag.jpg')
+        if ticket_type == "Stag":
+            pass
+        elif ticket_type == "Couple":
+            img = Image.open('early-couple.jpg')
+        qr.add_data(qr_string)
+        qr.make()
+        img_qr = qr.make_image(fill_color="black", back_color="#E6E6FA")
+        pos = (1440,90)
+        img.paste(img_qr, pos)
         stream = BytesIO()
         img.save(stream)
 #         16Gjz0uD3LhVcv5gW_0NeGhjf30ZWFJnn
