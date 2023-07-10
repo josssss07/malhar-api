@@ -40,14 +40,31 @@ def hello():
 
 @app.get("/test")
 def hello():
-    return {"message": "API is running", "status": 200}
+    return {"message": "API is running - test", "status": 200}
 
 
-@app.get("/generate-qr")
+@app.get("/generate-qr/normal")
 def new_qr(response_id: str):
     try:
         qr_string = response_id
         img = qrcode.make(qr_string)
+        stream = BytesIO()
+        img.save(stream)
+#         16Gjz0uD3LhVcv5gW_0NeGhjf30ZWFJnn
+        file_metadata = {'name': f"{response_id}.png", 'parents': ['1E-MPKuk-RNKYiBRuUQAOt5vXtRLFT4Si']}
+        media = MediaIoBaseUpload(stream, mimetype='image/png', )
+        file = drive_service.files().create(body=file_metadata, media_body=media,
+                                            fields='id').execute()
+        # print(F'File ID: {file.get("id")}')
+        return {"message": "QR Generated successfully! ", "status": 200}
+    except:
+        return {"message": "Unexpected error occurred", "status": 503}
+
+@app.get("/generate-qr/early")
+def new_qr(response_id: str):
+    try:
+        qr_string = response_id
+        img = qrcode.make(qr_string + "Early Bird")
         stream = BytesIO()
         img.save(stream)
 #         16Gjz0uD3LhVcv5gW_0NeGhjf30ZWFJnn
