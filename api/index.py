@@ -1,7 +1,6 @@
 from io import BytesIO
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-import json
 from PIL import Image
 from oauth2client.service_account import ServiceAccountCredentials
 from googleapiclient.discovery import build
@@ -15,7 +14,10 @@ import hypercorn
 
 app = FastAPI()
 
-# app.mount("/", StaticFiles(directory="static"), name="static")
+try:
+  app.mount("/", StaticFiles(directory="static"), name="static")
+except Exception as e:
+  print(e)
 
 cred_dict = {
   "type": "service_account",
@@ -50,6 +52,7 @@ def hello():
 
 @app.get("/generate-qr/normal")
 def new_qr(response_id: str, ticket_type:str):
+    print(os.getcwd())
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
