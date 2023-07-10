@@ -60,11 +60,11 @@ def new_qr(response_id: str, ticket_type:str):
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
-        img = Image.open('late-stag.jpg')
+        img = late_stag
         if ticket_type == "Stag":
             print("Stag")
         elif ticket_type == "Couple":
-            img = Image.open('late-couple.jpg')
+            img = late_couple
         qr.add_data(qr_string)
         qr.make()
         img_qr = qr.make_image(fill_color="black", back_color="#E6E6FA")
@@ -92,7 +92,7 @@ def new_qr(response_id: str, ticket_type:str):
         if ticket_type == "Stag":
             print("Stag")
         elif ticket_type == "Couple":
-            img = Image.open(f'early-couple.jpg')
+            img = early_couple
         qr.add_data(qr_string)
         qr.make()
         img_qr = qr.make_image(fill_color="black", back_color="#E6E6FA")
