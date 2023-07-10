@@ -1,4 +1,6 @@
 from io import BytesIO
+
+import requests
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from PIL import Image
@@ -14,7 +16,7 @@ import hypercorn
 
 app = FastAPI()
 
-app.mount("/", StaticFiles(directory="static"), name="static")
+# app.mount("/", StaticFiles(directory="static"), name="static")
 
 cred_dict = {
   "type": "service_account",
@@ -36,6 +38,11 @@ drive_service = build('drive', 'v3', credentials=credentials)
 sheets_service = build('sheets', 'v4', credentials=credentials)
 
 spreadsheet_id = '1SQ0XUe5gC26CVMm7Lmrk-uGZTZlfs6g-DcclqfB-FUI'
+
+early_stag = Image.open(requests.get("https://raw.githubusercontent.com/Valeron-T/discord-webhook-test/63d309d098305ccf1dd1e52477a98c83a47cb798/early-stag.jpg", stream=True).raw)
+early_couple = Image.open(requests.get("https://raw.githubusercontent.com/Valeron-T/discord-webhook-test/63d309d098305ccf1dd1e52477a98c83a47cb798/early-couple.jpg", stream=True).raw)
+late_stag = Image.open(requests.get("https://raw.githubusercontent.com/Valeron-T/discord-webhook-test/63d309d098305ccf1dd1e52477a98c83a47cb798/late-stag.jpg", stream=True).raw)
+late_couple = Image.open(requests.get("https://raw.githubusercontent.com/Valeron-T/discord-webhook-test/63d309d098305ccf1dd1e52477a98c83a47cb798/late-couple.jpg", stream=True).raw)
 
 @app.get("/")
 def hello():
@@ -81,7 +88,7 @@ def new_qr(response_id: str, ticket_type:str):
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
-        img = Image.open(f'early-stag.jpg')
+        img = early_stag
         if ticket_type == "Stag":
             print("Stag")
         elif ticket_type == "Couple":
