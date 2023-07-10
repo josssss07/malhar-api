@@ -1,5 +1,6 @@
 from io import BytesIO
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 import json
 from PIL import Image
 from oauth2client.service_account import ServiceAccountCredentials
@@ -13,6 +14,8 @@ import os
 import hypercorn
 
 app = FastAPI()
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 cred_dict = {
   "type": "service_account",
@@ -51,11 +54,11 @@ def new_qr(response_id: str, ticket_type:str):
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
-        img = Image.open('/var/task/late-stag.jpg')
+        img = Image.open('static/late-stag.jpg')
         if ticket_type == "Stag":
             print("Stag")
         elif ticket_type == "Couple":
-            img = Image.open('late-couple.jpg')
+            img = Image.open('static/late-couple.jpg')
         qr.add_data(qr_string)
         qr.make()
         img_qr = qr.make_image(fill_color="black", back_color="#E6E6FA")
@@ -79,11 +82,11 @@ def new_qr(response_id: str, ticket_type:str):
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
-        img = Image.open(f'{os.getcwd()}/early-stag.jpg')
+        img = Image.open(f'static/early-stag.jpg')
         if ticket_type == "Stag":
             print("Stag")
         elif ticket_type == "Couple":
-            img = Image.open(f'early-couple.jpg')
+            img = Image.open(f'static/early-couple.jpg')
         qr.add_data(qr_string)
         qr.make()
         img_qr = qr.make_image(fill_color="black", back_color="#E6E6FA")
