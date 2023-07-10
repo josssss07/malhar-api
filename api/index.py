@@ -51,7 +51,7 @@ def new_qr(response_id: str, ticket_type:str):
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
-        img = Image.open('late-stag.jpg')
+        img = Image.open('/var/task/late-stag.jpg')
         if ticket_type == "Stag":
             print("Stag")
         elif ticket_type == "Couple":
