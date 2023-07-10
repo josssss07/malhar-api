@@ -50,7 +50,6 @@ def hello():
 
 @app.get("/generate-qr/normal")
 def new_qr(response_id: str, ticket_type:str):
-    print(os.getcwd())
     try:
         qr = qrcode.QRCode(box_size=14)
         qr_string = response_id
