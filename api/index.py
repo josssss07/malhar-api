@@ -68,7 +68,7 @@ def new_qr(response_id: str, ticket_type:str):
         # print(F'File ID: {file.get("id")}')
         return {"message": "QR Generated successfully! ", "status": 200}
     except Exception as e:
-        print(e.with_traceback())
+        print(e)
         return {"message": "Unexpected error occurred", "status": 503}
 
 
