@@ -14,10 +14,7 @@ import hypercorn
 
 app = FastAPI()
 
-try:
-  app.mount("/", StaticFiles(directory="static"), name="static")
-except Exception as e:
-  print(e)
+app.mount("/", StaticFiles(directory="static"), name="static")
 
 cred_dict = {
   "type": "service_account",
